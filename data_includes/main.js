@@ -168,7 +168,28 @@ PennController("final",
     newText("<p>This is the end of the experiment. The results were successfully sent to the server. Thank you for your participation!</p>")
         .print()
     ,
-    newText("<p>Your code is: </p>")
+
+    newCanvas("empty6", 1, 10)
+    .print()
+
+    ,
+
+    newText("Code",  " <p>Important!:</p> <p> Please copy the following code and paste it in the Clickworker form.<p> </p> Payment will proceed only after proceeding with this step!</p>")
+    .print()
+
+    ,
+
+    newCanvas("empty7", 1, 5)
+    .print()
+
+    ,
+
+    newText("Code2", "<b> Code: EXTMET1920 </b>")
+    .print()
+
+    ,
+
+    newText("<p><a href='https://www.type.your/website/confirmation/link.here'>Click' here to confirm your participation.</a></p>")
         .print()
     ,
     newText("<p>You can close the window now.</p>")
