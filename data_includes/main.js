@@ -86,7 +86,116 @@ PennController( "welcome",
 // Practice Trail ////////
 
 PennController("practice",
-
+newTimer(500)
+          .start()
+          .wait()
+      ,
+      newText("Trial1", "John works all day. He is always exhausted")
+          .print()
+      ,
+      newKey(" ")
+          .wait()
+      ,
+      getText("Trial1")
+          .remove()
+      ,
+      newText("Trial2", "John is a horse")
+          .print()
+      ,
+      newKey(" ")
+          .wait()
+      ,
+      getText("Trial2")
+          .remove()
+      ,
+      newTimer("timer1", 1000)
+          .start()
+          .wait()
+      ,
+      newText("Trial3", "Farm")
+      ,
+      newText("No1", "<b>No [F]</b>")
+      ,
+      newText("Yes1", "<b>Yes [J]</b>")
+      ,
+      newCanvas("LDT1", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+          .settings.add(330, 0, getText("Trial3"))
+          .settings.add(200, 150, getText("No1"))
+          .settings.add(460, 150, getText("Yes1"))
+          .print()
+      ,
+      newSelector()
+          .settings.add(getText("No1"), getText("Yes1"))
+          .settings.keys("F", "J")
+          .wait()
+      ,
+      getCanvas("LDT1")
+          .remove()
+      ,
+      newText("pleasewait1","Please wait until the next trial starts. Do not press any key.")
+          .print()
+      ,
+      newTimer(1000)
+          .start()
+          .wait()
+      ,
+      getText("pleasewait1")
+         .remove()
+      ,
+    newTimer(500)
+          .start()
+          .wait()
+      ,
+      newText("Trial4", "Mary feeds her whole family. She is always giving them food")
+          .print()
+      ,
+      newKey(" ")
+          .wait()
+      ,
+      getText("Trial4")
+          .remove()
+      ,
+      newText("Trial5", "Mary is a soup kitchen")
+          .print()
+      ,
+      newKey(" ")
+          .wait()
+      ,
+      getText("Trial5")
+          .remove()
+      ,
+      newTimer(400)
+          .start()
+          .wait()
+      ,
+      newText("Trial6", "Slint")
+      ,
+      newText("No", "<b>No [F]</b>")
+      ,
+      newText("Yes", "<b>Yes [J]</b>")
+      ,
+      newCanvas("LDT2", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+          .settings.add(330, 0, getText("Trial6"))
+          .settings.add(200, 150, getText("No"))
+          .settings.add(460, 150, getText("Yes"))
+          .print()
+      ,
+      newSelector()
+          .settings.add(getText("No"), getText("Yes"))
+          .settings.keys("F", "J")
+          .wait()
+      ,
+      getCanvas("LDT2")
+          .remove()
+      ,
+      newText("pleasewait3","The actual experiment is about to begin. Press spacebar to continue to the experiment")
+          .print()
+      ,
+      newKey(" ")
+          .wait()
+      ,
+      getText("pleasewait3")
+         .remove()
 )
 
 // Main part of the experiment /////////
@@ -140,7 +249,7 @@ PennController.Template(
       getCanvas("LDT")
           .remove()
       ,
-      newText("pleasewait","Please wait until the next trail starts. Do not press any key.")
+      newText("pleasewait","Please wait until the next trial starts. Do not press any key.")
           .print()
       ,
       newTimer("wait", 1000)
