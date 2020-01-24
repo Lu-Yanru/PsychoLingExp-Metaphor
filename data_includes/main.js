@@ -188,7 +188,7 @@ newTimer(500)
       getCanvas("LDT2")
           .remove()
       ,
-      newText("pleasewait3","The actual experiment is about to begin. Press spacebar to continue to the experiment")
+      newText("pleasewait3","<p>End of the practice round. The actual experiment is about to begin.</p><p>Remember, press <b>F</b> to anser <b>No</b> and <b>J</b> to anser <b>Yes</b>.</p><p>You can press spacebar to continue to the experiment now.</p>")
           .print()
       ,
       newKey(" ")
