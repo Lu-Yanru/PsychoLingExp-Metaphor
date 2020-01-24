@@ -90,7 +90,7 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial1", "John works all day. He is always exhausted")
+      newText("Trial1", "John works all day. He is always exhausted.")
           .print()
       ,
       newKey(" ")
@@ -99,7 +99,7 @@ newTimer(500)
       getText("Trial1")
           .remove()
       ,
-      newText("Trial2", "John is a horse")
+      newText("Trial2", "John is a horse.")
           .print()
       ,
       newKey(" ")
@@ -112,7 +112,7 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial3", "Farm")
+      newText("Trial3", "farm")
       ,
       newText("No1", "<b>No [F]</b>")
       ,
@@ -146,7 +146,7 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial4", "Mary feeds her whole family. She is always giving them food")
+      newText("Trial4", "Mary feeds her whole family. She is always giving them food.")
           .print()
       ,
       newKey(" ")
@@ -155,7 +155,7 @@ newTimer(500)
       getText("Trial4")
           .remove()
       ,
-      newText("Trial5", "Mary is a soup kitchen")
+      newText("Trial5", "Mary is a soup kitchen.")
           .print()
       ,
       newKey(" ")
@@ -168,7 +168,7 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial6", "Slint")
+      newText("Trial6", "slint")
       ,
       newText("No", "<b>No [F]</b>")
       ,
@@ -188,7 +188,7 @@ newTimer(500)
       getCanvas("LDT2")
           .remove()
       ,
-      newText("pleasewait3","<p>End of the practice round. The actual experiment is about to begin.</p><p>Remember, press <b>F</b> to anser <b>No</b> and <b>J</b> to anser <b>Yes</b>.</p><p>You can press spacebar to continue to the experiment now.</p>")
+      newText("pleasewait3","<p>End of the practice round. The actual experiment is about to begin.</p><p>Remember, press <b>F</b> to anser <b>No</b> and <b>J</b> to anser <b>Yes</b>.</p><p>You can press the spacebar to continue to the experiment now.</p>")
           .print()
       ,
       newKey(" ")
@@ -283,7 +283,7 @@ PennController("final",
 
     ,
 
-    newText("Code",  " <p>Important!:</p> <p> Please copy the following code and paste it in the Clickworker form.<p> </p> Payment will proceed only after proceeding with this step!</p>")
+    newText("Code",  " <p>Important:</p> <p> Please copy the following code and paste it in the Clickworker form.<p> </p> Payment will proceed only after proceeding with this step!</p>")
     .print()
 
     ,
