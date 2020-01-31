@@ -285,7 +285,7 @@ PennController("final",
     newCanvas("empty6", 1, 10)
     .print()
     ,
-    newText("<p><a href='https://app.prolific.co/submissions/complete?cc=28B5F87A'>Click' here to confirm your participation.</a></p>")
+    newText("<p><a href='https://app.prolific.co/submissions/complete?cc=28B5F87A'>Click here to confirm your participation.</a></p>")
         .print()
     ,
     newText("<p>You can close the window now.</p>")
