@@ -112,16 +112,16 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial3", "<p style='color:red'><big>farm</big></p>")
+      newText("Trial3", "<b><font size='7'>farm</font></b>")
       ,
       newText("No1", "<small>No [F]</small>")
       ,
       newText("Yes1", "<small>Yes [J]</small>")
       ,
       newCanvas("LDT1", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
-          .settings.add(330, 0, getText("Trial3"))
-          .settings.add(200, 80, getText("No1"))
-          .settings.add(460, 80, getText("Yes1"))
+          .settings.add(300, 0, getText("Trial3"))
+          .settings.add(250, 90, getText("No1"))
+          .settings.add(410, 90, getText("Yes1"))
           .print()
       ,
       newSelector()
@@ -168,16 +168,16 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial6", "slint")
+      newText("Trial6", "<b><font size='7'>slint</font></b>")
       ,
-      newText("No", "<b>No [F]</b>")
+      newText("No2", "<small>No [F]</small>")
       ,
-      newText("Yes", "<b>Yes [J]</b>")
+      newText("Yes2", "<small>Yes [J]</small>")
       ,
-      newCanvas("LDT2", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
-          .settings.add(330, 0, getText("Trial6"))
-          .settings.add(200, 150, getText("No"))
-          .settings.add(460, 150, getText("Yes"))
+      newCanvas("LDT1", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+          .settings.add(300, 0, getText("Trial6"))
+          .settings.add(250, 90, getText("No2"))
+          .settings.add(410, 90, getText("Yes2"))
           .print()
       ,
       newSelector()
@@ -228,16 +228,16 @@ PennController.Template(
           .start()
           .wait()
       ,
-      newText("Target", variable.Target)
+      newText("Target", "<b><font size='7'>variable.Target</font></b>")
       ,
-      newText("No", "<b>No [F]</b>")
+      newText("No", "<small>No [F]</small>")
       ,
-      newText("Yes", "<b>Yes [J]</b>")
+      newText("Yes", "<small>Yes [J]</small>")
       ,
-      newCanvas("LDT", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
-          .settings.add(330, 0, getText("Target"))
-          .settings.add(200, 150, getText("No"))
-          .settings.add(460, 150, getText("Yes"))
+      newCanvas("LDT1", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+          .settings.add(300, 0, getText("Target"))
+          .settings.add(250, 90, getText("No"))
+          .settings.add(410, 90, getText("Yes"))
           .print()
       ,
       newSelector()
