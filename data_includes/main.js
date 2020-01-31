@@ -112,16 +112,16 @@ newTimer(500)
           .start()
           .wait()
       ,
-      newText("Trial3", "farm")
+      newText("Trial3", "<p style='color:red'><big>farm</big></p>")
       ,
-      newText("No1", "<b>No [F]</b>")
+      newText("No1", "<small>No [F]</small>")
       ,
-      newText("Yes1", "<b>Yes [J]</b>")
+      newText("Yes1", "<small>Yes [J]</small>")
       ,
       newCanvas("LDT1", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
           .settings.add(330, 0, getText("Trial3"))
-          .settings.add(200, 150, getText("No1"))
-          .settings.add(460, 150, getText("Yes1"))
+          .settings.add(200, 80, getText("No1"))
+          .settings.add(460, 80, getText("Yes1"))
           .print()
       ,
       newSelector()
