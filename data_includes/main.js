@@ -310,6 +310,7 @@ PennController.Template(
   .log( "Group"  , variable.Group )
   .log( "Condition", variable.Condition )
   .log("Time", variable.Time)
+  .log("LDT", variable.LDT)
 )
 
 
