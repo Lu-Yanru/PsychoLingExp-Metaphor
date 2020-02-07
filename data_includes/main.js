@@ -11,6 +11,10 @@ PennController( "welcome",
     ,
     newText("text1", "<p>Welcome to the experiment!</p>")
     ,
+    newText("text3", "<p>Thank you for your participation.</p>")
+    ,
+    newText("text4", "<p>In this experiment you need to read a few sentences and perform some simple decision tasks.</p>")
+    ,
     newText("text2", "<p>Humboldt Universitaet zu Berlin, Department of German Language and Linguistics</p>")
     ,
     //newText("text3","<p>Please enter your ID and then click the button below to start the experiment.</p>")
@@ -27,6 +31,12 @@ PennController( "welcome",
         .wait()
     ,
     getText("text1")
+        .remove()
+    ,
+    getText("text3")
+        .remove()
+    ,
+    getText("text4")
         .remove()
     ,
     getText("text2")
