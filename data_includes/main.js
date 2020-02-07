@@ -232,26 +232,32 @@ PennController.Template(
           .wait()
       ,
        newText("Teil1", variable.Teil1)
+          .settings.log()
       ,
       newCanvas("canvas1", 700, 500)
           //.settings.center()
           .settings.add("center at 50%", "top at 0%",getText("Teil1"))
+          .settings.log()
           .print()
       ,
       newKey(" ")
+          .settings.log()
           .wait()
       ,
       getCanvas("canvas1")
           .remove()
       ,
       newText("Teil2", variable.Teil2)
+          .settings.log()
       ,
       newCanvas("canvas2", 700, 500)
           //.settings.center()
           .settings.add("center at 50%", "top at 0%",getText("Teil2"))
+          .settings.log()
           .print()
       ,
       newKey(" ")
+          .settings.log()
           .wait()
       ,
       getCanvas("canvas2")
@@ -262,6 +268,7 @@ PennController.Template(
           .wait()
       ,
       newText("Target", variable.Target)
+          .settings.log()
           .settings.css("font-weight","bold")
           .settings.css("font-size", "xx-large")
       ,
@@ -274,6 +281,7 @@ PennController.Template(
           .settings.add("center at 50%", "middle at 0%", getText("Target"))
           .settings.add(250, 50, getText("No"))
           .settings.add(410, 50, getText("Yes"))
+          .settings.log()
           .print()
       ,
       newSelector()
