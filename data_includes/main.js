@@ -131,7 +131,7 @@ newTimer(500)
       ,
       newText("Yes1", "<small>Yes [J]</small>")
       ,
-      newCanvas("LDT1", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+      newCanvas("LDT1", 700, 500)
           .settings.center()
           .settings.add("center at 50%", "middle at 0%", getText("Trial3"))
           .settings.add(250, 50, getText("No1"))
@@ -188,7 +188,7 @@ newTimer(500)
       ,
       newText("Yes2", "<small>Yes [J]</small>")
       ,
-      newCanvas("LDT2", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+      newCanvas("LDT2", 700, 500)
           .settings.center()
           .settings.add("center at 50%", "middle at 0%", getText("Trial6"))
           .settings.add(250, 50, getText("No2"))
@@ -221,22 +221,30 @@ PennController.Template(
           .start()
           .wait()
       ,
-      newText("Teil1", variable.Teil1)
+       newText("Teil1", variable.Teil1)
+      ,
+      newCanvas("canvas1", 700, 500)
+          //.settings.center()
+          .settings.add("center at 50%", "top at 0%",getText("Teil1"))
           .print()
       ,
       newKey(" ")
           .wait()
       ,
-      getText("Teil1")
+      getCanvas("canvas1")
           .remove()
       ,
       newText("Teil2", variable.Teil2)
+      ,
+      newCanvas("canvas2", 700, 500)
+          //.settings.center()
+          .settings.add("center at 50%", "top at 0%",getText("Teil2"))
           .print()
       ,
       newKey(" ")
           .wait()
       ,
-      getText("Teil2")
+      getCanvas("canvas2")
           .remove()
       ,
       newTimer("timer", variable.Time)
@@ -251,7 +259,7 @@ PennController.Template(
       ,
       newText("Yes", "<small>Yes [J]</small>")
       ,
-      newCanvas("LDT", 700, 500) // Should we generally create a canvate for the sentences as well? Some long sentences strech across the whole screen and look awful...
+      newCanvas("LDT", 700, 500)
           .settings.center()
           .settings.add("center at 50%", "middle at 0%", getText("Target"))
           .settings.add(250, 50, getText("No"))
