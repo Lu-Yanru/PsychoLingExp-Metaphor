@@ -9,6 +9,9 @@ body {
     font-weight: bold;
     font-size: medium;
 }
+.button {
+    font-size: large;
+}
 div.bar-container {
     border: 1px solid;
     border-color: #9ea4b1;
