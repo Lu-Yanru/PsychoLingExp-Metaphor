@@ -1,5 +1,6 @@
 PennController.ResetPrefix(null); // Initiates PennController
 PennController.AddHost("https://filedn.com/lDf2Oa0trFMzhcSFiv5VDuu/ibex/"); // loads pictures from external server
+PennController.DebugOff()
 
 
 PennController.Sequence("welcome", "practice", rshuffle("experiment"), "send", "final")
