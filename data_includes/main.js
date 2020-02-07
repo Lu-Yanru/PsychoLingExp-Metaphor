@@ -117,19 +117,31 @@ newTimer(500)
       newText("Trial1", "John works all day. He is always exhausted.")
           .print()
       ,
+      newText("pressspacebar", "<i><small>press spacebar to see next line<small></i>") //added this line to give additional instructions
+          .print()
+      ,
       newKey(" ")
           .wait()
       ,
       getText("Trial1")
           .remove()
       ,
+      getText("pressspacebar")
+          .remove()
+      ,
       newText("Trial2", "John is a horse.")
+          .print()
+      ,
+      getText("pressspacebar")
           .print()
       ,
       newKey(" ")
           .wait()
       ,
       getText("Trial2")
+          .remove()
+      ,
+      getText("pressspacebar") //This takes away the additional instruction
           .remove()
       ,
       newTimer("timer1", 1000)
@@ -144,11 +156,17 @@ newTimer(500)
       newText("Yes1", "<small>Yes [J]</small>")
            .settings.css("font-size", "medium")
       ,
+      newText("nono","<i><small>If you think the letters don't form a word press F for No<small></i>") //Additional instruction for decision task text
+      ,
+      newText("yesyes", "<i><small>If you do think it forms a word, press J for Yes<small></i>") //Yes, instruction text.
+      ,
       newCanvas("LDT1", 700, 500)
           .settings.center()
           .settings.add("center at 50%", "top at 0%", getText("Trial3"))
           .settings.add(250, 50, getText("No1"))
           .settings.add(410, 50, getText("Yes1"))
+          .settings.add(200, 80, getText("nono")) //added an additional instruction
+          .settings.add(200, 100, getText("yesyes")) //Yes-text for additional instruction
           .print()
       ,
       newSelector()
@@ -177,19 +195,31 @@ newTimer(500)
       newText("Trial4", "Mary feeds her whole family. She is always giving them food.")
           .print()
       ,
+      getText("pressspacebar")
+          .print()
+      ,
       newKey(" ")
           .wait()
       ,
       getText("Trial4")
           .remove()
       ,
+      getText("pressspacebar")
+          .remove()
+      ,
       newText("Trial5", "Mary is a soup kitchen.")
+          .print()
+      ,
+      getText("pressspacebar")
           .print()
       ,
       newKey(" ")
           .wait()
       ,
       getText("Trial5")
+          .remove()
+      ,
+      getText("pressspacebar")
           .remove()
       ,
       newTimer(400)
@@ -209,6 +239,8 @@ newTimer(500)
           .settings.add("center at 50%", "top at 0%", getText("Trial6"))
           .settings.add(250, 50, getText("No2"))
           .settings.add(410, 50, getText("Yes2"))
+          .settings.add(200, 80, getText("nono")) //added an additional instruction
+          .settings.add(200, 100, getText("yesyes")) //Yes-text for additional instruction
           .print()
       ,
       newSelector()
