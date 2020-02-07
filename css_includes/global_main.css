@@ -3,7 +3,6 @@ body {
     background-color: white;
     margin-left: 0;
     margin-top: 5em;
-    font-size: large;
 }
 .lindent { margin-left: 5em; }
 .sending-results {
@@ -17,6 +16,9 @@ div.bar-container {
 }
 div.bar {
     background-color: blue;
+}
+p {
+font-size: large;
 }
 p.progress-text {
     padding-top: 0.5em;
