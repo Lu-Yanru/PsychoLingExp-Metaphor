@@ -198,8 +198,10 @@ newTimer(500)
      newText("Trial6", "<b><font size='6'>slint</font></b>")
       ,
       newText("No2", "<small>No [F]</small>")
+           .settings.css("font-size", "medium")
       ,
       newText("Yes2", "<small>Yes [J]</small>")
+           .settings.css("font-size", "medium")
       ,
       newCanvas("LDT2", 700, 500)
           .settings.center()
