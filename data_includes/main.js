@@ -9,7 +9,7 @@ PennController( "welcome",
     defaultText
         .print()
     ,
-    newText("text1", "<p>Welcome to the experiment!</p>")
+    newText("text1", "<h2>Welcome to the experiment!</h2>")
     ,
     newText("text3", "<p>Thank you for your participation.</p>")
     ,
@@ -138,12 +138,14 @@ newTimer(500)
       newText("Trial3", "<b><font size='6'>farm</font></b>")
       ,
       newText("No1", "<small>No [F]</small>")
+           .settings.css("font-size", "medium")
       ,
       newText("Yes1", "<small>Yes [J]</small>")
+           .settings.css("font-size", "medium")
       ,
       newCanvas("LDT1", 700, 500)
           .settings.center()
-          .settings.add("center at 50%", "middle at 0%", getText("Trial3"))
+          .settings.add("center at 50%", "top at 0%", getText("Trial3"))
           .settings.add(250, 50, getText("No1"))
           .settings.add(410, 50, getText("Yes1"))
           .print()
@@ -157,6 +159,7 @@ newTimer(500)
           .remove()
       ,
       newText("pleasewait1","Please wait until the next trial starts. Do not press any key.")
+          .settings.css("font-size", "large")
           .print()
       ,
       newTimer(1000)
@@ -200,7 +203,7 @@ newTimer(500)
       ,
       newCanvas("LDT2", 700, 500)
           .settings.center()
-          .settings.add("center at 50%", "middle at 0%", getText("Trial6"))
+          .settings.add("center at 50%", "top at 0%", getText("Trial6"))
           .settings.add(250, 50, getText("No2"))
           .settings.add(410, 50, getText("Yes2"))
           .print()
@@ -273,8 +276,10 @@ PennController.Template(
           .settings.css("font-size", "xx-large")
       ,
       newText("No", "<small>No [F]</small>")
+          .settings.css("font-size", "medium")
       ,
       newText("Yes", "<small>Yes [J]</small>")
+          .settings.css("font-size", "medium")
       ,
       newCanvas("LDT", 700, 500)
           .settings.center()
@@ -294,6 +299,7 @@ PennController.Template(
           .remove()
       ,
       newText("pleasewait","Please wait until the next trial starts. Do not press any key.")
+          .settings.css("font-size", "large")
           .print()
       ,
       newTimer("wait", 1000)
