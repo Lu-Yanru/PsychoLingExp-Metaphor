@@ -4,6 +4,9 @@ body {
     margin-left: 0;
     margin-top: 5em;
 }
+.button {
+    font-size: large;
+}
 .lindent { margin-left: 5em; }
 .sending-results {
     font-weight: bold;
@@ -19,9 +22,6 @@ div.bar {
 }
 p {
 font-size: x-large;
-}
-.button{
-    font-size: large;
 }
 p.progress-text {
     padding-top: 0.5em;
