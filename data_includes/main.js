@@ -69,6 +69,19 @@ PennController( "welcome",
     ,
     getButton("button3")
         .remove()
+    ,   
+    newHtml("instructions2", "instructions2.html")
+        .print()
+    ,
+    newButton("button4", "continue")
+        .print()
+        .wait()
+    ,
+    getHtml("instructions2")
+        .remove()
+    ,
+    getButton("button4")
+        .remove()
     ,
     newHtml("VPInfo", "VPInfo.html")
         .settings.log() // log inputs in html
