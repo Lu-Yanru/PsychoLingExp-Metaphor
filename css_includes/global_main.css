@@ -34,7 +34,7 @@ p.practice-box {
     font-size: small;
     text-align: center;
 }
-p.button{
+div.button{
     font-size: large;
 }
 span.retry {
