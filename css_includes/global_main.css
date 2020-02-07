@@ -9,26 +9,6 @@ body {
     font-weight: bold;
     font-size: medium;
 }
-.button {
-    width: 7em;
-    height: 1.5em;
-    background: #26396B;
-    color: white;
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4em;
-    border-radius: 5px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.2em;
-    vertical-align: middle;
-    text-align: center;
-    font-size: large;
-}
 div.bar-container {
     border: 1px solid;
     border-color: #9ea4b1;
@@ -53,6 +33,9 @@ p.practice-box {
     padding-bottom: 1em;
     font-size: small;
     text-align: center;
+}
+p.button{
+    font-size: large;
 }
 span.retry {
     color: blue;
