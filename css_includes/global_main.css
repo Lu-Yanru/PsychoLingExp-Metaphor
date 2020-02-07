@@ -20,6 +20,9 @@ div.bar {
 p {
 font-size: x-large;
 }
+.button{
+    font-size: large;
+}
 p.progress-text {
     padding-top: 0.5em;
     margin-top: 0;
@@ -33,9 +36,6 @@ p.practice-box {
     padding-bottom: 1em;
     font-size: small;
     text-align: center;
-}
-div.button{
-    font-size: large;
 }
 span.retry {
     color: blue;
