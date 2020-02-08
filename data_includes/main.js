@@ -174,19 +174,15 @@ newTimer(500)
           .settings.keys("F", "J")
           .wait()
       ,
+      newButton("validation", "Continue")
+       .settings.center()
+       .print()
+       .wait()
+       .settings.log()
+       .remove()       
+      ,
       getCanvas("LDT1")
           .remove()
-      ,
-      newText("pleasewait1","Please wait until the next trial starts. Do not press any key.")
-          .settings.css("font-size", "large")
-          .print()
-      ,
-      newTimer(1000)
-          .start()
-          .wait()
-      ,
-      getText("pleasewait1")
-         .remove()
       ,
     newTimer(500)
           .start()
@@ -247,6 +243,14 @@ newTimer(500)
           .settings.add(getText("No1"), getText("Yes1"))
           .settings.keys("F", "J")
           .wait()
+      
+      ,
+      newButton("validation2", "Continue")
+       .settings.center()
+       .print()
+       .wait()
+       .settings.log()
+       .remove()       
       ,
       getCanvas("LDT2")
           .remove()
@@ -330,19 +334,16 @@ PennController.Template(
           .settings.log()
           .wait()
       ,
+      newButton("validation3", "Continue")
+       .settings.center()
+       .print()
+       .wait()
+       .settings.log()
+       .remove()                         
+      ,                       
       getCanvas("LDT")
           .remove()
-      ,
-      newText("pleasewait","Please wait until the next trial starts. Do not press any key.")
-          .settings.css("font-size", "large")
-          .print()
-      ,
-      newTimer("wait", 1000)
-          .start()
-          .wait()
-      ,
-      getText("pleasewait")
-         .remove()
+     
   )
   //.log( "ID"     , getVar("ID")    )
   .log( "ItemNum"   ,variable.ItemNum   )
