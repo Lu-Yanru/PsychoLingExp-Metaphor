@@ -14,9 +14,11 @@ PennController( "welcome",
     ,
     newText("text3", "<p>Thank you for your participation.</p>")
     ,
-    newText("text4", "<p>In this experiment you need to read a few sentences and perform some simple decision tasks.</p>")
+    newText("text4", "<p>In this experiment, you will to read a few sentences and make some simple decisions.</p>")
     ,
-    newText("text2", "<p>Humboldt Universitaet zu Berlin, Department of German Language and Linguistics</p>")
+    newText("text5", "<p>The experiment will take about 10 minutes.</p>")
+    ,
+    newText("text2", "<p><small>Humboldt Universitaet zu Berlin, Department of German Language and Linguistics</small></p>")
     ,
     //newText("text3","<p>Please enter your ID and then click the button below to start the experiment.</p>")
     //,
@@ -38,6 +40,9 @@ PennController( "welcome",
         .remove()
     ,
     getText("text4")
+        .remove()
+    ,
+    getText("text5")
         .remove()
     ,
     getText("text2")
@@ -80,7 +85,7 @@ PennController( "welcome",
     ,
     getButton("button3")
         .remove()
-    ,   
+    ,
     newHtml("instructions2", "instructions2.html")
         .print()
     ,
@@ -92,6 +97,19 @@ PennController( "welcome",
         .remove()
     ,
     getButton("button4")
+        .remove()
+    ,
+    newHtml("instructions3", "instructions3.html")
+        .print()
+    ,
+    newButton("button5", "continue")
+        .print()
+        .wait()
+    ,
+    getHtml("instructions3")
+        .remove()
+    ,
+    getButton("button5")
         .remove()
     ,
     newHtml("VPInfo", "VPInfo.html")
@@ -110,40 +128,40 @@ PennController( "welcome",
 // Practice Trail ////////
 
 PennController("practice",
-newTimer(500)
+      newTimer(500)
           .start()
           .wait()
       ,
       newText("Trial1", "John works all day. He is always exhausted.")
           .print()
       ,
-      newText("pressspacebar", "<i><small>press spacebar to see next line<small></i>") //added this line to give additional instructions
-          .print()
-      ,
+      //newText("pressspacebar", "<i><small>press spacebar to see next line<small></i>") //added this line to give additional instructions
+      //    .print()
+      //,
       newKey(" ")
           .wait()
       ,
       getText("Trial1")
           .remove()
       ,
-      getText("pressspacebar")
-          .remove()
-      ,
+      //getText("pressspacebar")
+      //    .remove()
+      //,
       newText("Trial2", "John is a horse.")
           .print()
       ,
-      getText("pressspacebar")
-          .print()
-      ,
+      //getText("pressspacebar")
+      //    .print()
+      //,
       newKey(" ")
           .wait()
       ,
       getText("Trial2")
           .remove()
       ,
-      getText("pressspacebar") //This takes away the additional instruction
-          .remove()
-      ,
+      //getText("pressspacebar") //This takes away the additional instruction
+      //    .remove()
+      //,
       newTimer("timer1", 1000)
           .start()
           .wait()
@@ -156,17 +174,17 @@ newTimer(500)
       newText("Yes1", "<small>Yes [J]</small>")
            .settings.css("font-size", "medium")
       ,
-      newText("nono","<i><small>If you think the letters don't form a word press F for No<small></i>") //Additional instruction for decision task text
-      ,
-      newText("yesyes", "<i><small>If you do think it forms a word, press J for Yes<small></i>") //Yes, instruction text.
-      ,
+      //newText("nono","<i><small>If you think the letters don't form a word press F for No<small></i>") //Additional instruction for decision task text
+      //,
+      //newText("yesyes", "<i><small>If you do think it forms a word, press J for Yes<small></i>") //Yes, instruction text.
+      //,
       newCanvas("LDT1", 700, 500)
           .settings.center()
           .settings.add("center at 50%", "top at 0%", getText("Trial3"))
           .settings.add(250, 50, getText("No1"))
           .settings.add(410, 50, getText("Yes1"))
-          .settings.add(200, 80, getText("nono")) //added an additional instruction
-          .settings.add(200, 100, getText("yesyes")) //Yes-text for additional instruction
+          //.settings.add(200, 80, getText("nono")) //added an additional instruction
+          //.settings.add(200, 100, getText("yesyes")) //Yes-text for additional instruction
           .print()
       ,
       newSelector()
@@ -174,55 +192,53 @@ newTimer(500)
           .settings.keys("F", "J")
           .wait()
       ,
-      newButton("validation", "Continue")
-       .settings.center()
-       .print()
-       .wait()
-       .settings.log()
-       .remove()       
-      ,
       getCanvas("LDT1")
           .remove()
       ,
-    newTimer(500)
-          .start()
+      newText("proceed1", "<small>Press the space bar to read the next metaphor.</small>")
+          .print()
+      ,
+      newKey(" ")
           .wait()
+      ,
+      getText("proceed1")
+          .remove()
       ,
       newText("Trial4", "Mary feeds her whole family. She is always giving them food.")
           .print()
       ,
-      getText("pressspacebar")
-          .print()
-      ,
+      //getText("pressspacebar")
+      //    .print()
+      //,
       newKey(" ")
           .wait()
       ,
       getText("Trial4")
           .remove()
       ,
-      getText("pressspacebar")
-          .remove()
-      ,
+      //getText("pressspacebar")
+      //    .remove()
+      //,
       newText("Trial5", "Mary is a soup kitchen.")
           .print()
       ,
-      getText("pressspacebar")
-          .print()
-      ,
+      //getText("pressspacebar")
+      //    .print()
+      //,
       newKey(" ")
           .wait()
       ,
       getText("Trial5")
           .remove()
       ,
-      getText("pressspacebar")
-          .remove()
-      ,
+      //getText("pressspacebar")
+      //    .remove()
+      //,
       newTimer(400)
           .start()
           .wait()
       ,
-     newText("Trial6", "<b><font size='6'>slint</font></b>")
+      newText("Trial6", "<b><font size='6'>slint</font></b>")
       ,
       newText("No2", "<small>No [F]</small>")
            .settings.css("font-size", "medium")
@@ -235,34 +251,26 @@ newTimer(500)
           .settings.add("center at 50%", "top at 0%", getText("Trial6"))
           .settings.add(250, 50, getText("No2"))
           .settings.add(410, 50, getText("Yes2"))
-          .settings.add(200, 80, getText("nono")) //added an additional instruction
-          .settings.add(200, 100, getText("yesyes")) //Yes-text for additional instruction
+          //.settings.add(200, 80, getText("nono")) //added an additional instruction
+          //.settings.add(200, 100, getText("yesyes")) //Yes-text for additional instruction
           .print()
       ,
       newSelector()
           .settings.add(getText("No1"), getText("Yes1"))
           .settings.keys("F", "J")
           .wait()
-      
-      ,
-      newButton("validation2", "Continue")
-       .settings.center()
-       .print()
-       .wait()
-       .settings.log()
-       .remove()       
       ,
       getCanvas("LDT2")
           .remove()
       ,
-      newText("pleasewait3","<p>End of the practice round. The actual experiment is about to begin.</p><p>Remember, press <b>F</b> to answer <b>No</b> and <b>J</b> to answer <b>Yes</b>.</p><p>You can press the spacebar to continue to the experiment now.</p>")
+      newHtml("practice", "practice.html")
           .print()
       ,
       newKey(" ")
           .wait()
       ,
-      getText("pleasewait3")
-         .remove()
+      getHtml("practice")
+          .remove()
 )
 
 // Main part of the experiment /////////
@@ -273,7 +281,7 @@ PennController.Template(
           .start()
           .wait()
       ,
-       newText("Teil1", variable.Teil1)
+      newText("Teil1", variable.Teil1)
           .settings.log()
       ,
       newCanvas("canvas1", 700, 500)
@@ -322,7 +330,7 @@ PennController.Template(
       ,
       newCanvas("LDT", 700, 500)
           .settings.center()
-          .settings.add("center at 50%", "middle at 0%", getText("Target"))
+          .settings.add("center at 50%", "top at 0%", getText("Target"))
           .settings.add(250, 50, getText("No"))
           .settings.add(410, 50, getText("Yes"))
           .settings.log()
@@ -334,16 +342,17 @@ PennController.Template(
           .settings.log()
           .wait()
       ,
-      newButton("validation3", "Continue")
-       .settings.center()
-       .print()
-       .wait()
-       .settings.log()
-       .remove()                         
-      ,                       
       getCanvas("LDT")
           .remove()
-     
+      ,
+      newText("proceed", "<small>Press the space bar to read the next metaphor.</small>")
+          .print()
+      ,
+      newKey(" ")
+          .wait()
+      ,
+      getText("proceed")
+          .remove()
   )
   //.log( "ID"     , getVar("ID")    )
   .log( "ItemNum"   ,variable.ItemNum   )
@@ -361,13 +370,13 @@ PennController.Template(
 PennController.SendResults("send") // send results before participants seeing the completion screen
 
 PennController("final",
-    newText("<p>This is the end of the experiment. The results were successfully sent to the server. Thank you for your participation!</p>")
+    newText("<p>This is the end of the experiment. Thank you for your participation!</p>")
         .print()
     ,
     newCanvas("empty6", 1, 10)
-    .print()
+        .print()
     ,
-    newText("<p><a href='https://app.prolific.co/submissions/complete?cc=28B5F87A'>Click here to confirm your participation.</a></p>")
+    newText("<p><a href='https://app.prolific.co/submissions/complete?cc=28B5F87A' target='_blank'>Click here to confirm your participation.</a></p>")
         .print()
     ,
     newText("<p>You can close the window now.</p>")
